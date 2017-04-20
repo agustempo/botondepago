@@ -120,7 +120,7 @@
 		<!-- One -->
 			<section id="one" class="wrapper style2 special">
 				<header class="major">
-					<h4><?php if ($orden == 'tdi' || $orden == 'tdv')
+					<?php if ($orden == 'tdi' || $orden == 'tdv')
 					{								
 						echo "<ul>Abonando según tu sede:<br/>
 							- <b>$1000 a $1500</b>: Córdoba o Río Cuarto.<br/>
@@ -136,7 +136,7 @@
 						Llená el monto a pagar en el casillero de abajo, clickeá en el botón y seguí los pasos.<br/> Podes pagar en Efectivo o con Tarjeta y el monto lo usaremos para tu seguro médico, comida y transporte
 						(por las dudas, acá tenes un <b><a href='https://sites.google.com/a/techo.org/veni-a-construir/techo---instructivo-pago' target='_blank'>Instructivo</a></b>).</ul>";
 					}?>
-					<ul>Si querés participar y tenés problemas para cubrir el pago (total o parcial), no lo dudes, solicítanos una BECA o PRORROGA enviando un mail a <b><?php echo $mail[$sede] ?></b></ul></h4>
+					<ul>Si querés participar y tenés problemas para cubrir el pago (total o parcial), no lo dudes, solicítanos una BECA o PRORROGA enviando un mail a <b><?php echo $mail[$sede] ?></b></ul>
 				</header>
 			</section>
 
@@ -163,7 +163,7 @@
 						<input type="text" id="buyer_document_number" name="buyer_document_number" placeholder="Como figura en Pilote" required/>
 						<br/>
 						<h4>Email:</h4>
-						<input type="text" id="buyerEmail" name="buyerEmail" required/>
+						<input type="text" id="buyerEmail" name="buyerEmail" placeholder="Como figura en Pilote" required/>
 						<br/>		
 						<input type="hidden" name="merchant" value="4083795"/>
 						<input type="hidden" name="payment_method_available" value="all"/>
