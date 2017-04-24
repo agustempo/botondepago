@@ -127,14 +127,14 @@
 							- <b>$1200 a $1700</b>: Buenos Aires, Rosario, Neuquén - Río Negro o Tucumán.<br/>
 							- <b>$1500 a $2000</b>: Salta, Corrientes - Chaco o Misiones.<br/>
 							Llená el monto a pagar en el casillero de abajo, clickeá en el botón y seguí los pasos.<br/> Podes pagar en Efectivo o con Tarjeta y el monto lo usaremos para tu seguro médico, comida y transporte
-							(por las dudas, acá tenes un <b><a href='https://sites.google.com/a/techo.org/veni-a-construir/techo---instructivo-pago' target='_blank'>Instructivo</a></b>).</ul>";
+							(por las dudas, acá tenes un <b><a href='https://sites.google.com/a/techo.org/veni-a-construir/techo-instructivo-pago' target='_blank'>Instructivo</a></b>).</ul>";
 					} 
 					else
 					{
 						echo "<ul>Asociándote o asociando a un conocido en el siguiente <b><a href='http://www.techo.org.ar/socios/formulario'>LINK</a></b>.</ul>
 						<ul>Abonando a través de 'PayU' <b>$montos[$sede]</b>.
 						Llená el monto a pagar en el casillero de abajo, clickeá en el botón y seguí los pasos.<br/> Podes pagar en Efectivo o con Tarjeta y el monto lo usaremos para tu seguro médico, comida y transporte
-						(por las dudas, acá tenes un <b><a href='https://sites.google.com/a/techo.org/veni-a-construir/techo---instructivo-pago' target='_blank'>Instructivo</a></b>).</ul>";
+						(por las dudas, acá tenes un <b><a href='https://sites.google.com/a/techo.org/veni-a-construir/techo-instructivo-pago' target='_blank'>Instructivo</a></b>).</ul>";
 					}?>
 					<ul>Si querés participar y tenés problemas para cubrir el pago (total o parcial), no lo dudes, solicítanos una BECA o PRORROGA enviando un mail a <b><?php echo $mail[$sede] ?></b></ul>
 				</header>
