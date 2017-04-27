@@ -14,7 +14,7 @@
   	$descripcionSede['BA'] = 'Buenos Aires';
 	$descripcionSede['MIS-OBE'] = 'Oberá';
 	$descripcionSede['MIS-POS'] = 'Posadas';
-	$descripcionSede['NQN-RN'] = 'Neuquén - Rio Negro';
+	$descripcionSede['NQN-RN'] = 'Neuquén - Río Negro';
 	$descripcionSede['COCHA'] = 'Corrientes - Chaco';
 	$descripcionSede['TUC'] = 'Tucumán';
 	$descripcionSede['CBA'] = 'Córdoba';
