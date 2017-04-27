@@ -163,7 +163,7 @@
 						<input type="text" id="buyer_document_number" name="buyer_document_number" onkeypress="return valida(event)" placeholder="Como figura en Pilote" required/>
 						<br/>
 						<h4>Email:</h4>
-						<input type="text" id="buyerEmail" name="buyerEmail" placeholder="Como figura en Pilote" required/>
+						<input type="email" id="buyerEmail" name="buyerEmail" placeholder="Como figura en Pilote" required/>
 						<br/>		
 						<input type="hidden" name="merchant" value="4083795"/>
 						<input type="hidden" name="payment_method_available" value="all"/>
