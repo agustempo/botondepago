@@ -114,7 +114,7 @@
 						<li><a href="#one" class="button icon fa-chevron-down scrolly">Ver Opciones</a></li>
 					</ul>
 				</div>
-				<div class="image phone"><div class="inner"><img src="images/foto1.jpg" alt=""/></div></div>
+				<div class="image phone"><div class="inner"><img src="images/logo.jpg" alt=""/></div></div>
 			</header>
 
 		<!-- One -->
