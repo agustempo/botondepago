@@ -160,7 +160,7 @@
 						<input type="text" id="buyerFullName" name="buyerFullName" placeholder="Completo" required/>
 						<br/>
 						<h4>DNI / Pasaporte:</h4>
-						<input type="text" id="buyer_document_number" name="buyer_document_number" placeholder="Como figura en Pilote" required/>
+						<input type="text" id="buyer_document_number" name="buyer_document_number" onkeypress="return valida(event)" placeholder="Como figura en Pilote" required/>
 						<br/>
 						<h4>Email:</h4>
 						<input type="text" id="buyerEmail" name="buyerEmail" placeholder="Como figura en Pilote" required/>
@@ -192,5 +192,20 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+				function valida(e){
+					tecla = (document.all) ? e.keyCode : e.which;
+
+					//Tecla de retroceso para borrar, siempre la permite
+					if (tecla==8){
+						return true;
+					}
+						
+					// Patron de entrada, en este caso solo acepta numeros
+					patron =/[0-9a-zA-Z]/;
+					tecla_final = String.fromCharCode(tecla);
+					return patron.test(tecla_final);
+				}
+			</script>
 	</body>
 </html>
