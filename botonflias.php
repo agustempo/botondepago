@@ -8,7 +8,7 @@
 	$mes = $_GET['mes'];
 	$anio = $_GET['anio'];
 	$nombre =$_GET['nombre'];
-	$codigoCC = $tipo.' '.$sede.' '.$mes.' '.$anio.' '.$nombre;
+	$codigoCC = $sede.' '.$mes.' '.$anio.' '.$tipo.' '.$nombre;
 
 	$descripcionTipo['Fam'] = 'Familia';
 	$descripcionTipo['Gru'] = 'Grupo';
@@ -23,12 +23,12 @@
 	
 	if ($tipo == 'Fam' || $tipo=='Gru' || $tipo=='Sta')
 	{
-		$montos['BA'] = "$24000";
-		$montos['BAN'] = "$24000";
-		$montos['BAO'] = "$24000";
-		$montos['BAS'] = "$24000";
-		$montos['LP'] = "$24000";
-		$montos['ON'] = "$24000";
+		$montos['BA'] = "24000";
+		$montos['BAN'] = "24000";
+		$montos['BAO'] = "24000";
+		$montos['BAS'] = "24000";
+		$montos['LP'] = "24000";
+		$montos['ON'] = "24000";
 		
 		$mail['BA'] = 'familias.buenosaires@techo.org';
 		$mail['BAN'] = 'familias.buenosaires@techo.org';
@@ -68,7 +68,7 @@
 		<!-- One -->
 			<section id="one" class="wrapper style2 special">
 				<header class="major">
-					<h4><ul>La Construcción con <?php echo $descripcionTipo[$tipo]?> es una oportunidad de voluntariado donde se participa de<br/> la construcción de una vivienda de emergencia junto a una familia que hoy vive en situación de extrema pobreza.</ul>
+					<h4><ul>La Construcción con tu <?php echo $descripcionTipo[$tipo]?> es una oportunidad de voluntariado donde se participa de<br/> la construcción de una vivienda de emergencia junto a una familia que hoy vive en situación de extrema pobreza.</ul>
 					<ul>La actividad, que transcurre durante un fin de semana completo, no está limitada a la edad ni a las habilidades<br/> en construcción de sus voluntarios, sino a sus ganas y compromiso con el trabajo comunitario.</ul>
 					<ul>Desde TECHO proveemos las herramientas, además de asegurarnos de que en todo momento se sientan acompañados<br/> por voluntarios que guiarán la construcción. Desde su lado, deberán financiar los materiales de la vivienda<br/> 
 					transfiriendo o depositando ARS$ <?php echo $montos[$sede]?>, como así también llevar la comida para compartir<br/> el fin de semana con la familia a la que le construirán la vivienda.</ul></h4>										
