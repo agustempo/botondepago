@@ -71,7 +71,7 @@
 					<h4><ul>La Construcción con tu <?php echo $descripcionTipo[$tipo]?> es una oportunidad de voluntariado donde se participa de<br/> la construcción de una vivienda de emergencia junto a una familia que hoy vive en situación de extrema pobreza.</ul>
 					<ul>La actividad, que transcurre durante un fin de semana completo, no está limitada a la edad ni a las habilidades<br/> en construcción de sus voluntarios, sino a sus ganas y compromiso con el trabajo comunitario.</ul>
 					<ul>Desde TECHO proveemos las herramientas, además de asegurarnos de que en todo momento se sientan acompañados<br/> por voluntarios que guiarán la construcción. Desde su lado, deberán financiar los materiales de la vivienda<br/> 
-					transfiriendo o depositando ARS$ <?php echo $montos[$sede]?>, como así también llevar la comida para compartir<br/> el fin de semana con la familia a la que le construirán la vivienda.</ul></h4>										
+					transfiriendo o depositando ARS$ <?php echo $montos[$sede]?> (<a href="https://sites.google.com/a/techo.org/veni-a-construir/techo-instructivo-pago-familias" target='_blank'>Instructivo</a>), como así también llevar la comida para compartir<br/> el fin de semana con la familia a la que le construirán la vivienda.</ul></h4>										
 				</header>			
 			</section>
 
