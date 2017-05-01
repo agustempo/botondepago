@@ -58,7 +58,7 @@
 				<div class="content">
 					<h2>Bienvenido al Botón de Pago<br/> <?php echo $descripcionTipo[$tipo]?> <?php echo $nombre?> de TECHO</h2>
 					<ul class="actions">
-						<li><a href="#one" class="button icon fa-chevron-down scrolly">Mas Información</a></li>
+						<li><a href="#one" class="button icon fa-chevron-down scrolly">Más Información</a></li>
 						<li><a href="#two" class="button icon fa-chevron-down scrolly">Ir a Pagar</a></li>					
 					</ul>
 				</div>
