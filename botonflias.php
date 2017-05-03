@@ -10,9 +10,9 @@
 	$nombre =$_GET['nombre'];
 	$codigoCC = $sede.' '.$mes.' '.$anio.' '.$tipo.' '.$nombre;
 
-	$descripcionTipo['Fam'] = 'Familia';
-	$descripcionTipo['Gru'] = 'Grupo';
-	$descripcionTipo['Sta'] = 'Staff';
+	$descripcionTipo['FAM'] = 'Familia';
+	$descripcionTipo['GRU'] = 'Grupo';
+	$descripcionTipo['STA'] = 'Staff';
 	
   	$descripcionSede['BA'] = 'Buenos Aires';
 	$descripcionSede['BAN'] = 'BA Sede Norte';
@@ -21,7 +21,7 @@
 	$descripcionSede['LP'] = 'La Plata';
 	$descripcionSede['ON'] = 'Oficina Nacional';
 	
-	if ($tipo == 'Fam' || $tipo=='Gru' || $tipo=='Sta')
+	if ($tipo == 'FAM' || $tipo=='GRU' || $tipo=='STA')
 	{
 		$montos['BA'] = "24000";
 		$montos['BAN'] = "24000";
