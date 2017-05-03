@@ -21,13 +21,13 @@
 	$descripcionSede['SAL'] = 'Salta';
 	$descripcionSede['ROS'] = 'Rosario';
 
-	$descripcionOrden['Mix'] = 'MIXTA';
-	$descripcionOrden['Jov'] = 'JÓVENES';
-	$descripcionOrden['Mas'] = 'MASIVA';
-	$descripcionOrden['tdi'] = 'INVIERNO';
-	$descripcionOrden['tdv'] = 'VERANO';
+	$descripcionOrden['MIX'] = 'MIXTA';
+	$descripcionOrden['JOV'] = 'JÓVENES';
+	$descripcionOrden['MAS'] = 'MASIVA';
+	$descripcionOrden['TDI'] = 'INVIERNO';
+	$descripcionOrden['TDV'] = 'VERANO';
 
-	if ($orden == 'Mix' || $orden=='Jov' || $orden=='Mas')
+	if ($orden == 'MIX' || $orden=='JOV' || $orden=='MAS')
 	{
 		$montos['BA'] = "entre $120 y $200";
 		$montos['MIS-OBE'] = "entre $80 y $100";
@@ -49,7 +49,7 @@
 		$mail['SAL'] = 'salta.argentina@techo.org';
 		$mail['ROS'] = 'voluntariado.rosario@techo.org';
 	} 
-	else if ($orden == 'tdi' || $orden == 'tdv')
+	else if ($orden == 'TDI' || $orden == 'TDV')
 	{
 		$montos['BA'] = "entre $1200 y $1700";
 		$montos['MIS-OBE'] = "entre $1500 y $2000";
@@ -92,7 +92,7 @@
 			<header id="header">
 				<div class="content">
 					<h1>¡Último Paso!</h1>
-					<h2><?php if ($orden == 'tdi' || $orden == 'tdv')
+					<h2><?php if ($orden == 'TDI' || $orden == 'TDV')
 					{
 						echo "Confirma tu participación en los<br/> TRABAJOS de $descripcionOrden[$orden] de TECHO";
 					} 
@@ -101,7 +101,7 @@
 							echo "Confirma tu participación en la construcción<br/> $descripcionOrden[$orden] de TECHO en $descripcionSede[$sede]";
 						}   
 					?></h2>
-					<h3><?php if ($orden == 'tdi' || $orden == 'tdv')
+					<h3><?php if ($orden == 'TDI' || $orden == 'TDV')
 					{
 						echo "¿CÓMO? Tenés 2 opciones:";
 					} 
@@ -120,7 +120,7 @@
 		<!-- One -->
 			<section id="one" class="wrapper style2 special">
 				<header class="major">
-					<?php if ($orden == 'tdi' || $orden == 'tdv')
+					<?php if ($orden == 'TDI' || $orden == 'TDV')
 					{								
 						echo "<ul>Abonando según tu sede:<br/>
 							- <b>$1000 a $1500</b>: Córdoba o Río Cuarto.<br/>
@@ -143,7 +143,7 @@
 		<!-- Three -->
 			<section id="three" class="wrapper style3 special">
 				<header class="major">
-					<h2><?php if ($orden == 'tdi' || $orden == 'tdv')
+					<h2><?php if ($orden == 'TDI' || $orden == 'TDV')
 					{
 						echo "Abonar los Trabajos";
 					} 
