@@ -10,7 +10,7 @@
 	$mes = $_GET['mes'];
 	$anio = $_GET['anio'];
 	$codigoCC = $tipo.' '.$numero.' '.$sede.' '.$orden.' '.$mes.' '.$anio;
-
+	
   	$descripcionSede['BA'] = 'Buenos Aires';
 	$descripcionSede['MIS-OBE'] = 'Oberá';
 	$descripcionSede['MIS-POS'] = 'Posadas';
@@ -20,13 +20,13 @@
 	$descripcionSede['CBA'] = 'Córdoba';
 	$descripcionSede['SAL'] = 'Salta';
 	$descripcionSede['ROS'] = 'Rosario';
-
+	
 	$descripcionOrden['MIX'] = 'MIXTA';
 	$descripcionOrden['JOV'] = 'JÓVENES';
 	$descripcionOrden['MAS'] = 'MASIVA';
 	$descripcionOrden['TDI'] = 'INVIERNO';
 	$descripcionOrden['TDV'] = 'VERANO';
-
+	
 	if ($orden == 'MIX' || $orden=='JOV' || $orden=='MAS')
 	{
 		$montos['BA'] = "entre $120 y $200";
@@ -152,7 +152,7 @@
 							echo "Abonar la construcción";
 						}
 					?></h2>
-					<form id="formulario" action="https://checkout.payulatam.com/ppp-web-gateway-payu" method="post" target="_top">							
+					<form id="formulario" action="https://gateway.payulatam.com/ppp-web-gateway" method="post" target="_top">							
 						<ul><h4>Monto a Donar:</h4>
 						<input type="text" id="item_ammount_1" name="item_ammount_1" value="" onKeyPress="return SoloNumerico(event, this);" Onblur="AplicoFormato(this)" required/>						
 						<br/>
@@ -160,19 +160,23 @@
 						<input type="text" id="buyerFullName" name="buyerFullName" placeholder="Completo" required/>
 						<br/>
 						<h4>DNI / Pasaporte:</h4>
-						<input type="text" id="buyer_document_number" name="buyer_document_number" onkeypress="return valida(event)" placeholder="Como figura en Pilote" required/>
+						<input type="text" id="payerDocument" name="payerDocument" onkeypress="return valida(event)" placeholder="Como figura en Pilote" required/>
 						<br/>
 						<h4>Email:</h4>
 						<input type="email" id="buyerEmail" name="buyerEmail" placeholder="Como figura en Pilote" required/>
-						<br/>		
-						<input type="hidden" name="merchant" value="4083795"/>
-						<input type="hidden" name="payment_method_available" value="all"/>
-						<input type="hidden" id="item_name_1" name="item_name_1" value="<? echo $codigoCC; ?>"/>
-						<input type="hidden" name="item_quantity_1" value="1"/>
-						<input type="hidden" name="country_id" value="1"/>
-						<input type="hidden" name="seller_name" value="Un Techo"/>
-						<input type='submit' name=submit id="boton-donar" class="button special" value="Pagar" onclick="this.disabled=true; this.value=’Redirigiendo...’; this.form.submit()"/>
-					</ul></form>
+						<br/>				
+						<input type="hidden" id="amount" name="amount" value=""/>
+						<input type="hidden" id="merchantId" name="merchantId" value="536715"/>
+						<input type="hidden" id="referenceCode" name="referenceCode" value="CC-Voluntario"/>
+						<input type="hidden" id="accountId" name="accountId" value="538721"/>
+						<input type="hidden" id="description" name="description" value="<?php echo $codigoCC; ?>" />						
+						<input type="hidden" id="tax" name="tax" value="0"/>		
+						<input type="hidden" id="taxReturnBase" name="taxReturnBase" value="0"/>
+						<input type="hidden" id="signature" name="signature" value=""/>
+						<input type="hidden" id="currency" name="currency" value="ARS"/>	
+						<!--<button type="button" onclick="enviar()" id="boton-donar" value="Pagar"/>-->
+						<button type="button" onclick="enviar()" id="boton-donar" value="Pagar">Pagar</button></ul>
+					</form>
 				</header>			
 			</section>
 
@@ -186,72 +190,16 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script>
-				function valida(e)
-				{
-					tecla = (document.all) ? e.keyCode : e.which;
-					if (tecla==8)
-					{
-						return true;
-					}
-					patron =/[0-9a-zA-Z]/;
-					tecla_final = String.fromCharCode(tecla);
-					return patron.test(tecla_final);
-				}
-			</script>
-			<script language="javascript">
-				function SoloNumerico(e, obj)
-				{
-					var sKey = -1;
-					var bResult = true;
-					var bPunto = (obj.value.indexOf(".") != -1);
-					var lCantChars = obj.value.length;
-					if (window.event)
-					{
-						sKey = e.keyCode;
-					}
-					else if (e.which)
-					{
-						sKey = e.which;
-					}
-					if (sKey > 10)
-					{
-						if (((sKey < 48 || sKey > 57) && (sKey != 46 || bPunto)) || (!bPunto &&	lCantChars > 6 && sKey != 46))
-						{
-							bResult = false;
-						}
-					}
-					return bResult;
-				}
-				function AplicoFormato(oText)
-				{
-					var aDec = oText.value.split('.');
-					if(aDec.length > 1) 
-					{
-						if(aDec[1].length == 1) 
-						{
-							oText.value = aDec[0] + '.' + aDec[1].split('.')[0] + '0';
-						}
-						if(aDec[1].length == 0) 
-						{
-							oText.value = aDec[0] + '.00';
-						}
-						if(aDec[1].length >= 2) 
-						{
-							oText.value = aDec[0] + '.' + aDec[1].substr(0,2);
-						}
-					}
-					else
-					{
-						oText.value = aDec + '.00';
-					}
-				}
-			</script>
+		<script src="assets/js/enviar.js"></script>
+		<script src="assets/js/md5.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>	
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/documento.js"></script>
+		<script src="assets/js/numerico.js"></script>
+		
 	</body>
 </html>
