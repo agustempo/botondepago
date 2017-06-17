@@ -121,7 +121,7 @@
 			</footer>
 
 		<!-- Scripts -->
-		<script src="assets/js/enviar.js"></script>
+		<script src="assets/js/todo.js"></script>
 		<script src="assets/js/md5.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -129,7 +129,5 @@
 		<script src="assets/js/util.js"></script>	
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/documento.js"></script>
-		<script src="assets/js/numerico.js"></script>	
 	</body>
 </html>

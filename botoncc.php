@@ -174,7 +174,6 @@
 						<input type="hidden" id="taxReturnBase" name="taxReturnBase" value="0"/>
 						<input type="hidden" id="signature" name="signature" value=""/>
 						<input type="hidden" id="currency" name="currency" value="ARS"/>	
-						<!--<button type="button" onclick="enviar()" id="boton-donar" value="Pagar"/>-->
 						<button type="button" onclick="enviar()" id="boton-donar" value="Pagar">Pagar</button></ul>
 					</form>
 				</header>			
@@ -190,7 +189,7 @@
 			</footer>
 
 		<!-- Scripts -->
-		<script src="assets/js/enviar.js"></script>
+		<script src="assets/js/todo.js"></script>
 		<script src="assets/js/md5.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -198,7 +197,5 @@
 		<script src="assets/js/util.js"></script>	
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/documento.js"></script>
-		<script src="assets/js/numerico.js"></script>	
 	</body>
 </html>
