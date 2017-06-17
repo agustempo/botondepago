@@ -153,18 +153,18 @@
 						}
 					?></h2>
 					<form id="formulario" action="https://gateway.payulatam.com/ppp-web-gateway" method="post" target="_top">							
-						<ul><h4>Monto a Donar:</h4>
-						<input type="text" id="item_ammount_1" name="item_ammount_1" value="" onKeyPress="return SoloNumerico(event, this);" Onblur="AplicoFormato(this)" required/>						
-						<br/>
 						<h4>Nombre y Apellido:</h4>
 						<input type="text" id="buyerFullName" name="buyerFullName" placeholder="Completo" required/>
+						<br/>
+						<h4>Email:</h4>
+						<input type="email" id="buyerEmail" name="buyerEmail" placeholder="Como figura en Pilote" required/>
 						<br/>
 						<h4>DNI / Pasaporte:</h4>
 						<input type="text" id="payerDocument" name="payerDocument" onkeypress="return valida(event)" placeholder="Como figura en Pilote" required/>
 						<br/>
-						<h4>Email:</h4>
-						<input type="email" id="buyerEmail" name="buyerEmail" placeholder="Como figura en Pilote" required/>
-						<br/>				
+						<ul><h4>Monto a Donar:</h4>
+						<input type="text" id="item_ammount_1" name="item_ammount_1" value="" onKeyPress="return SoloNumerico(event, this);" Onblur="AplicoFormato(this)" required/>						
+						<br/>						
 						<input type="hidden" id="amount" name="amount" value=""/>
 						<input type="hidden" id="merchantId" name="merchantId" value="536715"/>
 						<input type="hidden" id="referenceCode" name="referenceCode" value="CC-Voluntario"/>
@@ -199,7 +199,6 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/documento.js"></script>
-		<script src="assets/js/numerico.js"></script>
-		
+		<script src="assets/js/numerico.js"></script>	
 	</body>
 </html>

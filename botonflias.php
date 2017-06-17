@@ -8,8 +8,8 @@
 	$mes = $_GET['mes'];
 	$anio = $_GET['anio'];
 	$nombre =$_GET['nombre'];
-	$codigoCC = $sede.' '.$mes.' '.$anio.' '.$tipo.' '.$nombre;
-
+	$codigoFlias = $sede.' '.$mes.' '.$anio.' '.$tipo.' '.$nombre;
+	
 	$descripcionTipo['FAM'] = 'Familia';
 	$descripcionTipo['GRU'] = 'Grupo';
 	$descripcionTipo['STA'] = 'Staff';
@@ -95,16 +95,18 @@
 						<input type="text" id="buyerEmail" name="buyerEmail" pattern="[a-z]{3}[0-9]{3}" required/>
 						<br/>
 						<h4>Monto a Pagar:</h4>
-						<input type="text" id="item_ammount_1" name="item_ammount_1" value="" onKeyPress="return SoloNumerico(event, this);" Onblur="AplicoFormato(this)" required/>						
+						<input type="text" id="item_ammount_1" name="item_ammount_1" value="" onKeyPress="return SoloNumerico(event, this);" Onblur="AplicoFormato(this)" required/>												
 						<br/>						
-						<input type="hidden" name="merchant" value="1352279"/>
-						<input type="hidden" name="payment_method_available" value="all"/>
-						<input type="hidden" id="item_name_1" name="item_name_1" value="<? echo $codigoCC; ?>"/>
-						<input type="hidden" name="item_quantity_1" value="1"/>
-						<input type="hidden" name="country_id" value="1"/>
-						<input type="hidden" name="seller_name" value="Un Techo"/>
-						<input type='submit' name=submit id="boton-donar" class="button special" value="Pagar" onclick="this.disabled=true; this.value=’Redirigiendo...’; this.form.submit()"/>
-						</ul>
+						<input type="hidden" id="amount" name="amount" value=""/>
+						<input type="hidden" id="merchantId" name="merchantId" value="536715"/>
+						<input type="hidden" id="referenceCode" name="referenceCode" value="CC-Familias"/>
+						<input type="hidden" id="accountId" name="accountId" value="538721"/>
+						<input type="hidden" id="description" name="description" value="<?php echo $codigoFlias; ?>" />
+						<input type="hidden" id="tax" name="tax" value="0"/>		
+						<input type="hidden" id="taxReturnBase" name="taxReturnBase" value="0"/>
+						<input type="hidden" id="signature" name="signature" value=""/>
+						<input type="hidden" id="currency" name="currency" value="ARS"/>			
+						<button type="button" onclick="enviar()" id="boton-donar" value="Pagar">Pagar</button></ul>									
 					</form>
 				</header>			
 			</section>
@@ -119,59 +121,15 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script language="javascript">
-				function SoloNumerico(e, obj)
-				{
-					var sKey = -1;
-					var bResult = true;
-					var bPunto = (obj.value.indexOf(".") != -1);
-					var lCantChars = obj.value.length;
-					if (window.event)
-					{
-						sKey = e.keyCode;
-					}
-					else if (e.which)
-					{
-						sKey = e.which;
-					}
-					if (sKey > 10)
-					{
-						if (((sKey < 48 || sKey > 57) && (sKey != 46 || bPunto)) || (!bPunto &&	lCantChars > 6 && sKey != 46))
-						{
-							bResult = false;
-						}
-					}
-					return bResult;
-				}
-				function AplicoFormato(oText)
-				{
-					var aDec = oText.value.split('.');
-					if(aDec.length > 1) 
-					{
-						if(aDec[1].length == 1) 
-						{
-							oText.value = aDec[0] + '.' + aDec[1].split('.')[0] + '0';
-						}
-						if(aDec[1].length == 0) 
-						{
-							oText.value = aDec[0] + '.00';
-						}
-						if(aDec[1].length >= 2) 
-						{
-							oText.value = aDec[0] + '.' + aDec[1].substr(0,2);
-						}
-					}
-					else
-					{
-						oText.value = aDec + '.00';
-					}
-				}
-			</script>
+		<script src="assets/js/enviar.js"></script>
+		<script src="assets/js/md5.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>	
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/documento.js"></script>
+		<script src="assets/js/numerico.js"></script>	
 	</body>
 </html>
