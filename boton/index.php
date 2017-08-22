@@ -27,6 +27,20 @@
 	$descripcionOrden['TDI'] = 'INVIERNO';
 	$descripcionOrden['TDV'] = 'VERANO';
 	
+	$descripcionMes['ENE'] = 'Enero';
+	$descripcionMes['FEB'] = 'Febrero';
+	$descripcionMes['MAR'] = 'Marzo';
+	$descripcionMes['ABR'] = 'Abril';
+	$descripcionMes['MAY'] = 'Mayo';
+	$descripcionMes['JUN'] = 'Junio';
+	$descripcionMes['JUL'] = 'Julio';
+	$descripcionMes['AGO'] = 'Agosto';
+	$descripcionMes['SEP'] = 'Septiembre';
+	$descripcionMes['OCT'] = 'Octubre';
+	$descripcionMes['NOV'] = 'Noviembre';
+	$descripcionMes['DIC'] = 'Diciembre';
+	
+		
 	if ($orden == 'MIX' || $orden == 'JOV' || $orden == 'MAS')
 	{
 		$montos['BA'] = "entre $120 y $200";
@@ -92,7 +106,7 @@
 				} 
 				else
 				{
-					echo "Confirma tu participación en la construcción<br/> $descripcionOrden[$orden] de TECHO en $descripcionSede[$sede]";
+					echo "Confirma tu participación en la construcción<br/> $descripcionOrden[$orden] de $descripcionMes[$mes] de TECHO en $descripcionSede[$sede]";
 				}?></h2>
 				<h3><?php if ($orden == 'TDI' || $orden == 'TDV')
 				{
