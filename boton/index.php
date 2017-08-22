@@ -202,11 +202,14 @@
 				<li><a href="https://www.facebook.com/TECHOargentina" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
 				<li><a href="https://twitter.com/TECHOarg" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
 				<li><a href="https://www.instagram.com/techo_argentina/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+				<li><a href="https://www.linkedin.com/company/2634308?trk=tyah" class="icon fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+				<li><a href="https://www.youtube.com/user/techoargentina" class="icon fa-youtube" target="_blank"><span class="label">Youtube</span></a></li>
 			</ul>
 			<p class="copyright">&copy; Techo Argentina. Credits: Santi Mello</p>
 		</footer>
 		<script src="assets/js/md5.js"></script>
 		<script src="assets/js/index.js"></script>
 		<script src="assets/js/documento.js"></script>
+		<script src="assets/js/requerido.js"></script>
 	</body>
 </html>
