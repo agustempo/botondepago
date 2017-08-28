@@ -9,7 +9,7 @@ function enviar()
 	var apiKey = "1Kxu0c6VkwsZThP8hMyzjOFD70~536715~";
 	var value = apiKey.concat(referenceCode, "~", amount, "~ARS");
 	var signature = md5(value);
-
+	
 	if (document.getElementById("buyerFullName"))
 	{
 		if (document.getElementById("buyerFullName").value == "")
@@ -17,7 +17,7 @@ function enviar()
 			alert ("Ingresa tu Nombre y Apellido");
 			document.getElementById("extra1").value =  document.getElementById("buyerFullName").value;
 		}
-	}	
+	}
 	if (document.getElementById("buyerEmail"))
 	{
 		if (document.getElementById("buyerEmail").value == "")
