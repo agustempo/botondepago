@@ -49,7 +49,7 @@
 		$montos['NQN-RN'] = "entre $65 y $100";
 		$montos['COCHA'] = "entre $100 y $140";
 		$montos['TUC'] = "entre $50 y $80";
-		$montos['CBA'] = "$100";
+		$montos['CBA'] = "entre $150 y $200";
 		$montos['SAL'] = "entre $100 a $120";
 		$montos['ROS'] = "entre $80 a $100";
 		
