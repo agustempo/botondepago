@@ -89,5 +89,6 @@ function enviar()
 	document.getElementById("amount").value = amount;
 	document.getElementById("signature").value = signature;
 	document.getElementById("referenceCode").value = referenceCode;
+	document.getElementById("description").value = document.getElementById("description").value + " dni=" + document.getElementById("payerDocument").value;
 	document.getElementById("formulario").submit();
 }
