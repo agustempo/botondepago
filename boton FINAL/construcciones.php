@@ -50,8 +50,8 @@
 		$montos['COCHA'] = "entre $100 y $140";
 		$montos['TUC'] = "entre $50 y $80";
 		$montos['CBA'] = "entre $150 y $200";
-		$montos['SAL'] = "entre $100 a $150";
-		$montos['ROS'] = "entre $80 a $100";
+		$montos['SAL'] = "entre $100 y $150";
+		$montos['ROS'] = "entre $80 y $100";
 		
 		$mail['BA'] = 'problemasdepago.argentina@techo.org';
 		$mail['MIS-OBE'] = 'obera.misiones@techo.org';
