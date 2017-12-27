@@ -43,15 +43,15 @@
 	
 	if ($orden == 'MIX' || $orden == 'JOV' || $orden == 'MAS')
 	{
-		$montos['BA'] = "entre $150 y $200";
-		$montos['MIS-OBE'] = "entre $100 y $150";
-		$montos['MIS-POS'] = "entre $100 y $150";
-		$montos['NQN-RN'] = "entre $80 y $120";
-		$montos['COCHA'] = "entre $100 y $150";
-		$montos['TUC'] = "entre $50 y $80";
-		$montos['CBA'] = "entre $150 y $200";
-		$montos['SAL'] = "entre $100 y $150";
-		$montos['ROS'] = "entre $80 y $100";
+		$montos['BA'] = 'entre $150 y $200';
+		$montos['MIS-OBE'] = 'entre $100 y $150';
+		$montos['MIS-POS'] = 'entre $100 y $150';
+		$montos['NQN-RN'] = 'entre $80 y $120';
+		$montos['COCHA'] = 'entre $100 y $150';
+		$montos['TUC'] = 'entre $50 y $80';
+		$montos['CBA'] = 'entre $150 y $200';
+		$montos['SAL'] = 'entre $100 y $150';
+		$montos['ROS'] = 'entre $80 y $100';
 		
 		$mail['BA'] = 'problemasdepago.argentina@techo.org';
 		$mail['MIS-OBE'] = 'obera.misiones@techo.org';
@@ -65,27 +65,27 @@
 	} 
 	else if ($orden == 'TDI' || $orden == 'TDV')
 	{
-		$montos['BA'] = "entre $800 y $1000";
-		$montos['MIS-OBE'] = "entre $1500 y $1800";
-		$montos['MIS-POS'] = "entre $1500 y $1800";
-		$montos['NQN-RN'] = "entre $1500 y $1800";
-		$montos['COCHA'] = "entre $1200 y $1500";
-		$montos['TUC'] = "entre $1500 y $1800";
-		$montos['CBA'] = "entre $1200 y $1500";
-		$montos['SAL'] = "entre $1500 y $1800";
-		$montos['ROS'] = "entre $1000 y $1200";
-		$montos['LOC'] = "entre $500 y $700";
+		$montos['BA'] = 'entre $800 y $1000';
+		$montos['MIS-OBE'] = 'entre $1500 y $1800';
+		$montos['MIS-POS'] = 'entre $1500 y $1800';
+		$montos['NQN-RN'] = 'entre $1500 y $1800';
+		$montos['COCHA'] = 'entre $1200 y $1500';
+		$montos['TUC'] = 'entre $1500 y $1800';
+		$montos['CBA'] = 'entre $1200 y $1500';
+		$montos['SAL'] = 'entre $1500 y $1800';
+		$montos['ROS'] = 'entre $1000 y $1200';
+		$montos['LOC'] = 'entre $500 y $700';
 		
-		$socios['BA'] = "10 socios de $80";
-		$socios['MIS-OBE'] = "10 socios de $150";
-		$socios['MIS-POS'] = "10 socios de $150";
-		$socios['NQN-RN'] = "10 socios de $150";
-		$socios['COCHA'] = "10 socios de $120";
-		$socios['TUC'] = "10 socios de $150";
-		$socios['CBA'] = "10 socios de $120";
-		$socios['SAL'] = "10 socios de $150";
-		$socios['ROS'] = "10 socios de $100";
-		$socios['LOC'] = "10 socios de $50";
+		$socios['BA'] = '10 socios de $80';
+		$socios['MIS-OBE'] = '10 socios de $150';
+		$socios['MIS-POS'] = '10 socios de $150';
+		$socios['NQN-RN'] = '10 socios de $150';
+		$socios['COCHA'] = '10 socios de $120';
+		$socios['TUC'] = '10 socios de $150';
+		$socios['CBA'] = '10 socios de $120';
+		$socios['SAL'] = '10 socios de $150';
+		$socios['ROS'] = '10 socios de $100';
+		$socios['LOC'] = '10 socios de $50';
 		
 		$mail['BA'] = 'trabajos.argentina@techo.org';
 		$mail['MIS-OBE'] = 'trabajos.argentina@techo.org';
@@ -121,7 +121,7 @@
 				}?></h2>
 				<h3>¿CÓMO?</h3>
 				<ul class="actions">
-					<li><a href="#one" class="button icon fa-chevron-down scrolly">Ver Opciones de pago</a></li>
+					<li><a href="#one" class="button icon fa-chevron-down scrolly">Ver opciones de pago</a></li>
 				</ul>
 			</div>
 			<div class="image phone"><div class="inner"><img src="images/<?php echo $orden?>.jpg" alt=""/></div></div>
