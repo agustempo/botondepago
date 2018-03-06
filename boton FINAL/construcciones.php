@@ -102,6 +102,7 @@
 
 <html>
 	<head>
+		<meta charset="utf-8"> 
 		<title>TECHO - Botón de Pago</title>
 		<link rel="shortcut icon" type="images/x-icon" href="/images/favicon.png"/>
 		<link rel="icon" href="images/favicon.png" type="images/x-icon"/>
